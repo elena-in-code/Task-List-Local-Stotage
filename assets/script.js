@@ -31,6 +31,7 @@ function loadEventListeners(){
 function addTask(e){
     if(taskInput.value === ''){
         alert("Add a task please");
+        e.preventDefault();
     } else {
         //create li element
         const li = document.createElement("li");
@@ -55,9 +56,7 @@ function addTask(e){
 
         //clear input
         taskInput.value = " ";
-    }
-    
-    e.preventDefault();
+    }    
 }
 
 // function to store task
